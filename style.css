@@ -1,0 +1,36 @@
+html {
+    font-size: .9rem;
+}
+
+:root {
+    --dark-blue: hsl(233, 47%, 7%);
+    --desat-blue: hsl(244, 38%, 16%);
+    --soft-violet: hsl(277, 64%, 61%);
+    --heading-white: hsl(0, 0%, 100%);
+    --paragraph-white: hsla(0, 0%, 100%, 0.75);
+    --stat-heading-white: hsla(0, 0%, 100%, 0.6);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    font-size: 0.9375rem;
+}
+
+.hero-image {
+    background-image: url('./images/image-header-mobile.jpg');
+    background-size: cover;
+}
+
+
+
+main {
+    margin: 0 auto;
+}
+
+@media only screen and (min-width: 650px) {
+    html {
+        font-size: 1.2rem;
+    }
+}

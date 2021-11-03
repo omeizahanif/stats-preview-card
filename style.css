@@ -34,7 +34,7 @@ main {
     background: var(--soft-violet);
     min-height: 30vh;
     border-top-left-radius: 5px;
-    
+    border-top-right-radius: 5px;
 }
 
 .hero-image::before {
@@ -49,6 +49,7 @@ main {
     background-size: cover;
     background-position: 50%;
     background-repeat: no-repeat;
+    border-top-left-radius: 5px;
     border-top-right-radius: 5px;
 }
 
@@ -119,10 +120,15 @@ main {
 
     .hero-image {
         min-width: 50%;
+        border-bottom-right-radius: 10px;
+        border-top-left-radius: 0;
     }
+
 
     .hero-image::before {
         background-image: url('images/image-header-desktop.jpg');
+        border-bottom-right-radius: 5px;
+        border-top-left-radius: 0;
     }
 
     .hero-content {

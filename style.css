@@ -1,5 +1,5 @@
 html {
-    font-size: .9rem;
+    font-size: .8rem;
 }
 
 :root {
@@ -12,25 +12,127 @@ html {
 }
 
 body {
+    background-color: var(--dark-blue);
     margin: 0;
-    padding: 0;
-    min-height: 100vh;
     font-size: 0.9375rem;
+    font-family: "Inter", sans-serif;
+    color: var(--paragraph-white);
+    min-height: 100vh;
+}
+
+main {
+    
+    margin: 2rem auto;
+    max-width: 25em;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
 }
 
 .hero-image {
-    background-image: url('./images/image-header-mobile.jpg');
+    position: relative;
+    background: var(--soft-violet);
+    min-height: 30vh;
+    border-top-left-radius: 5px;
+    
+}
+
+.hero-image::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+    background-image: url('images/image-header-mobile.jpg');
     background-size: cover;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    border-top-right-radius: 5px;
+}
+
+
+.hero-content {
+    background-color: var(--desat-blue);
+    padding: 1rem;
+    text-align: center;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
 
 
-main {
-    margin: 0 auto;
+.title {
+    color: var(--heading-white);
+
 }
 
-@media only screen and (min-width: 650px) {
-    html {
-        font-size: 1.2rem;
+.title span {
+    color: var(--soft-violet);
+}
+
+.description {
+    line-height: 1.7em;
+    padding: 0;
+
+}
+
+.stat-num {
+    color: var(--heading-white);
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin: 0;
+    padding: 0;
+    
+}
+
+.stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2.5em;
+
+    font-family: "Lexend Deca", sans-serif;
+    padding: 1rem 0;
+}
+
+
+.stat-companies p:last-child,
+.stat-templates p:last-child,
+.stat-queries p:last-child {
+    margin-top: .3em;
+    text-transform: uppercase;
+    font-size: .7rem;
+}
+
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media (min-width: 700px) {
+
+    main {
+        flex-direction: row-reverse;
+        max-width: 50em;
     }
+
+    .hero-image {
+        min-width: 50%;
+    }
+
+    .hero-image::before {
+        background-image: url('images/image-header-desktop.jpg');
+    }
+
+    .hero-content {
+        border-bottom-right-radius: 0;
+        border-top-left-radius: 5px;
+    }
+
+    .stat {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
 }

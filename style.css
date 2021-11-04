@@ -60,7 +60,7 @@ main {
 
 .hero-content {
     background-color: var(--desat-blue);
-    padding: 1rem;
+    padding: 1em;
     text-align: center;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
@@ -70,7 +70,7 @@ main {
 
 .title {
     color: var(--heading-white);
-
+    font-size: 1.8rem;
 }
 
 .title span {
@@ -80,7 +80,7 @@ main {
 .description {
     line-height: 1.7em;
     padding: 0;
-
+    font-size: .8rem;
 }
 
 .stat-num {
@@ -117,6 +117,10 @@ main {
 
 @media (min-width: 700px) {
 
+    html {
+        font-size: 1rem;
+    }
+
     main {
         flex-direction: row-reverse;
         max-width: 50em;
@@ -138,6 +142,12 @@ main {
     .hero-content {
         border-bottom-right-radius: 0;
         border-top-left-radius: 5px;
+        padding: 2em;
+    }
+
+    .title,
+    .description {
+        text-align: left;
     }
 
     .stat {
